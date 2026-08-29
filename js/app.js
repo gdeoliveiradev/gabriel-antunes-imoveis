@@ -119,6 +119,25 @@ function mostrarImoveis(lista) {
 
         `;
 
+        const imagem = card.querySelector(".imovel-imagem img");
+
+        imagem.addEventListener("error", () => {
+            const placeholder = document.createElement("div");
+
+            placeholder.className = "imovel-imagem-placeholder";
+            placeholder.setAttribute("role", "img");
+            placeholder.setAttribute(
+                "aria-label",
+                `Imagem indisponível de ${imovel.nome}`
+            );
+            placeholder.innerHTML = `
+                <span>Gabriel Antunes</span>
+                <strong>Imagem em breve</strong>
+            `;
+
+            imagem.replaceWith(placeholder);
+        }, { once: true });
+
 
         listaImoveis.appendChild(card);
 

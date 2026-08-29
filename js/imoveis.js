@@ -8,8 +8,8 @@ const imoveis = [
         area: "66 a 100 m²",
         vagas: "1 ou 2 vagas",
         status: "Lançamento",
-        destaque: "Piscinas, academia e lazer completo"
-        imagem: "assets/images/imoveis/quattre-istambul.jpg"
+        destaque: "Piscinas, academia e lazer completo",
+        imagem: "assets/images/imoveis/quattre-istambul.jpg.png"
     },
 
     {
@@ -21,8 +21,8 @@ const imoveis = [
         area: "35 a 57 m²",
         vagas: "1 vaga",
         status: "Pronto para morar",
-        destaque: "Próximo ao metrô e comércio"
-        imagem: "assets/images/imoveis/rodrigo-muniz.jpg"
+        destaque: "Próximo ao metrô e comércio",
+        imagem: "assets/images/imoveis/rodrigo-muniz.jpg.png"
     },
 
     {
@@ -34,8 +34,8 @@ const imoveis = [
         area: "26 a 102 m²",
         vagas: "1, 2 ou 3 vagas",
         status: "Pronto para morar",
-        destaque: "Mais de 40 itens de lazer"
-        imagem: "assets/images/imoveis/venice-park.jpg"
+        destaque: "Mais de 40 itens de lazer",
+        imagem: "assets/images/imoveis/venice-park.jpg.png"
     },
 
     {
@@ -47,8 +47,8 @@ const imoveis = [
         area: "88 a 112 m²",
         vagas: "2 ou 3 vagas",
         status: "Lançamento",
-        destaque: "Piscina, academia e churrasqueira"
-        imagem: "assets/images/imoveis/moment-noroeste.jpg"
+        destaque: "Piscina, academia e churrasqueira",
+        imagem: "assets/images/imoveis/moment-noroeste.jpg.png"
     },
 
     {
@@ -60,8 +60,8 @@ const imoveis = [
         area: "62 a 64 m²",
         vagas: "1 vaga",
         status: "Pronto para morar",
-        destaque: "Piscina aquecida e lazer completo"
-        imagem: "assets/images/imoveis/portal-parque.jpg"
+        destaque: "Piscina aquecida e lazer completo",
+        imagem: "assets/images/imoveis/portal-parque.jpg.png"
     },
 
     {
@@ -73,7 +73,7 @@ const imoveis = [
         area: "32 a 54 m²",
         vagas: "Com ou sem vaga",
         status: "Lançamento",
-        destaque: "Piscina, brinquedoteca e pet place"
-        imagem: "assets/images/imoveis/residencial-vitta.jpg"
+        destaque: "Piscina, brinquedoteca e pet place",
+        imagem: "assets/images/imoveis/residencial-vitta.jpg.jpg"
     }
 ];
