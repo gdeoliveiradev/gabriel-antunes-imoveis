@@ -46,6 +46,7 @@
                 <a href="#regioes">Regiões</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#contato">Contato</a>
+                <a href="#contato" class="nav-contact-mobile">Falar comigo</a>
 
             </nav>
 
@@ -57,8 +58,12 @@
                 class="menu-mobile"
                 id="menu-mobile"
                 aria-label="Abrir menu"
+                aria-controls="nav"
+                aria-expanded="false"
             >
-                ☰
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
         </div>
@@ -293,7 +298,205 @@
     </div>
 
 </section>
+
+
+<!-- =========================
+     ENCONTRE POR REGIÃO
+========================== -->
+
+<section class="regioes-section" id="regioes">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">BRASÍLIA E REGIÃO</span>
+
+            <h2>Encontre por região</h2>
+
+            <p>
+                Explore oportunidades em regiões selecionadas do Distrito Federal
+                e encontre uma localização alinhada ao seu estilo de vida.
+            </p>
+
+        </div>
+
+        <div class="regioes-grid">
+
+            <a class="regiao-card" href="#imoveis" data-regiao="Noroeste">
+                <img src="assets/images/imoveis/moment-noroeste.jpg.png" alt="Empreendimento no Noroeste, Brasília">
+                <span>Noroeste</span>
+            </a>
+
+            <a class="regiao-card" href="#imoveis" data-regiao="Águas Claras">
+                <img src="assets/images/imoveis/rodrigo-muniz.jpg.png" alt="Empreendimento em Águas Claras, Brasília">
+                <span>Águas Claras</span>
+            </a>
+
+            <a class="regiao-card" href="#imoveis" data-regiao="Park Sul">
+                <img src="assets/images/imoveis/venice-park.jpg.png" alt="Empreendimento no Park Sul, Brasília">
+                <span>Park Sul</span>
+            </a>
+
+            <a class="regiao-card" href="#imoveis" data-regiao="Sobradinho">
+                <img src="assets/images/imoveis/quattre-istambul.jpg.png" alt="Empreendimento em Sobradinho, Distrito Federal">
+                <span>Sobradinho</span>
+            </a>
+
+            <a class="regiao-card" href="#imoveis" data-regiao="Guará">
+                <img src="assets/images/imoveis/portal-parque.jpg.png" alt="Empreendimento no Guará, Distrito Federal">
+                <span>Guará</span>
+            </a>
+
+            <a class="regiao-card" href="#imoveis" data-regiao="Ceilândia">
+                <img src="assets/images/imoveis/residencial-vitta.jpg.jpg" alt="Empreendimento em Ceilândia, Distrito Federal">
+                <span>Ceilândia</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================== -->
+
+<section class="sobre-section" id="sobre">
+
+    <div class="container sobre-container">
+
+        <div class="sobre-image-area">
+            <div class="sobre-decoration"></div>
+            <img
+                src="assets/images/perfil/gabriel-perfil.jpg"
+                alt="Gabriel Antunes - Atendimento Imobiliário em Brasília"
+            >
+        </div>
+
+        <div class="sobre-content">
+
+            <span class="section-tag">ATENDIMENTO PRÓXIMO E ESTRATÉGICO</span>
+
+            <h2>Muito prazer, sou Gabriel Antunes.</h2>
+
+            <h3>Atendimento Imobiliário em Brasília</h3>
+
+            <p>
+                Meu trabalho é entender o seu momento e apresentar oportunidades
+                que façam sentido para seus objetivos, com clareza e atenção em
+                cada etapa da decisão.
+            </p>
+
+            <p>
+                Atuo com atendimento personalizado para compra de imóveis,
+                investimento e lançamentos em Brasília e no Distrito Federal,
+                conectando você a opções selecionadas com critério.
+            </p>
+
+            <div class="sobre-pilares" aria-label="Áreas de atendimento">
+                <span>Compra</span>
+                <span>Investimento</span>
+                <span>Lançamentos</span>
+            </div>
+
+            <a href="#contato" class="btn-primary">Conversar sobre meu imóvel</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================== -->
+
+<section class="contato-section" id="contato">
+
+    <div class="container contato-container">
+
+        <div class="contato-content">
+            <span class="section-tag">ATENDIMENTO PERSONALIZADO</span>
+            <h2>Não sabe qual imóvel escolher?</h2>
+            <p>
+                Conte o que você procura e receba opções compatíveis com seu perfil,
+                seus objetivos e o momento da sua decisão.
+            </p>
+        </div>
+
+        <a class="btn-whatsapp" href="#contato" data-whatsapp-link>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L.2 24l6.3-1.6a12 12 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.5Zm-8.4 18.3c-1.8 0-3.6-.5-5.2-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.7 9.7 0 1 1 8.5 4.7Zm5.3-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.7-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-.9-2.2c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.1.2 2.5 3.8 6 5.3.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.2-.1-.4-.2-.7-.3Z"/>
+            </svg>
+            Falar pelo WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
     </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-main">
+
+            <div class="footer-brand">
+                <a href="#inicio" class="logo">
+                    <span class="logo-nome">Gabriel</span>
+                    <span class="logo-sobrenome">Antunes</span>
+                </a>
+                <p>Atendimento Imobiliário em Brasília/DF</p>
+                <small>Em parceria com a Quadraimob.</small>
+            </div>
+
+            <nav class="footer-nav" aria-label="Navegação do rodapé">
+                <strong>Navegação</strong>
+                <a href="#inicio">Início</a>
+                <a href="#imoveis">Imóveis</a>
+                <a href="#regioes">Regiões</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <div class="footer-contact">
+                <strong>Atendimento</strong>
+                <p>Brasília e Distrito Federal</p>
+                <a href="#contato" data-whatsapp-link>Falar pelo WhatsApp</a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>
+                Valores, condições e disponibilidade sujeitos a alteração.
+                Consulte informações atualizadas.
+            </p>
+            <span>&copy; <span id="ano-atual"></span> Gabriel Antunes</span>
+        </div>
+
+    </footer>
+
+    <a
+        class="whatsapp-flutuante"
+        href="#contato"
+        data-whatsapp-link
+        aria-label="Falar com Gabriel Antunes pelo WhatsApp"
+        title="Falar pelo WhatsApp"
+    >
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L.2 24l6.3-1.6a12 12 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.5Zm-8.4 18.3c-1.8 0-3.6-.5-5.2-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.7 9.7 0 1 1 8.5 4.7Zm5.3-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.7-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-.9-2.2c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.1.2 2.5 3.8 6 5.3.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.2-.1-.4-.2-.7-.3Z"/>
+        </svg>
+    </a>
 
 
     <!-- JavaScript -->

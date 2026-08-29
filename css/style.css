@@ -935,9 +935,30 @@ button {
 
 
 .imovel-dados span {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
     color: #4b5563;
 
     font-size: 11px;
+}
+
+.imovel-dados small {
+    color: #8b9199;
+
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.imovel-dados strong {
+    color: #4b5563;
+
+    font-size: 11px;
+    font-weight: 500;
 }
 
 
@@ -1067,4 +1088,750 @@ button {
 }
 section {
     scroll-margin-top: 100px;
+}
+
+
+/* ========================================
+   NAVEGAÇÃO COMPLEMENTAR
+======================================== */
+
+.nav-contact-mobile {
+    display: none;
+}
+
+.menu-mobile span {
+    width: 25px;
+    height: 2px;
+
+    display: block;
+
+    background-color: var(--branco);
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-mobile span + span {
+    margin-top: 6px;
+}
+
+.menu-mobile.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-mobile.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-mobile.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ========================================
+   REGIÕES
+======================================== */
+
+.regioes-section {
+    padding: 100px 0;
+
+    background-color: var(--branco);
+}
+
+.regioes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.regiao-card {
+    min-height: 260px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    border-radius: 8px;
+
+    background-color: var(--azul-principal);
+
+    box-shadow: 0 12px 35px rgba(7, 24, 44, 0.12);
+}
+
+.regiao-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(7, 24, 44, 0.95) 0%,
+        rgba(7, 24, 44, 0.18) 65%,
+        transparent 100%
+    );
+}
+
+.regiao-card img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    inset: 0;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.regiao-card:hover img {
+    transform: scale(1.06);
+}
+
+.regiao-card span {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+
+    padding: 28px;
+
+    color: var(--branco);
+
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.regiao-card span::after {
+    content: "";
+
+    width: 35px;
+    height: 2px;
+
+    display: block;
+
+    margin-top: 10px;
+
+    background-color: var(--dourado);
+
+    transition: width 0.3s ease;
+}
+
+.regiao-card:hover span::after {
+    width: 58px;
+}
+
+
+/* ========================================
+   SOBRE
+======================================== */
+
+.sobre-section {
+    padding: 110px 0;
+
+    background-color: var(--cinza-claro);
+}
+
+.sobre-container {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+.sobre-image-area {
+    height: 590px;
+
+    position: relative;
+}
+
+.sobre-image-area img {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    z-index: 1;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 8px;
+
+    box-shadow: 0 25px 55px rgba(7, 24, 44, 0.18);
+}
+
+.sobre-decoration {
+    position: absolute;
+
+    width: 72%;
+    height: 72%;
+
+    right: -28px;
+    bottom: -28px;
+
+    border: 1px solid rgba(197, 164, 109, 0.75);
+    border-radius: 8px;
+}
+
+.sobre-content h2 {
+    max-width: 620px;
+
+    margin-bottom: 16px;
+
+    color: var(--azul-principal);
+
+    font-family: "Playfair Display", serif;
+    font-size: 46px;
+    line-height: 1.15;
+}
+
+.sobre-content h3 {
+    margin-bottom: 24px;
+
+    color: var(--dourado);
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sobre-content p {
+    max-width: 650px;
+
+    margin-bottom: 16px;
+
+    color: var(--cinza-texto);
+
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.sobre-pilares {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 30px 0 34px;
+}
+
+.sobre-pilares span {
+    padding: 10px 14px;
+
+    border: 1px solid rgba(197, 164, 109, 0.45);
+    border-radius: 4px;
+
+    color: var(--azul-principal);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   CONTATO
+======================================== */
+
+.contato-section {
+    padding: 85px 0;
+
+    background:
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(31, 77, 122, 0.45),
+            transparent 34%
+        ),
+        linear-gradient(120deg, var(--azul-principal), var(--azul-secundario));
+}
+
+.contato-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.contato-content {
+    max-width: 720px;
+}
+
+.contato-content h2 {
+    margin-bottom: 16px;
+
+    color: var(--branco);
+
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.contato-content p {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.btn-whatsapp {
+    min-width: 240px;
+    min-height: 54px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0 25px;
+
+    border-radius: 5px;
+
+    background-color: var(--dourado);
+
+    color: var(--azul-principal);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--dourado-claro);
+
+    transform: translateY(-3px);
+}
+
+.btn-whatsapp svg {
+    width: 20px;
+    height: 20px;
+
+    fill: currentColor;
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.footer {
+    padding: 70px 0 24px;
+
+    background-color: #04101e;
+
+    color: var(--branco);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr 1fr;
+
+    gap: 70px;
+
+    padding-bottom: 50px;
+}
+
+.footer-brand .logo {
+    width: fit-content;
+
+    margin-bottom: 22px;
+}
+
+.footer-brand p,
+.footer-contact p {
+    margin-bottom: 8px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.footer-brand small {
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 11px;
+}
+
+.footer-nav,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.footer-nav strong,
+.footer-contact strong {
+    margin-bottom: 5px;
+
+    color: var(--dourado);
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-nav a,
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 12px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+    color: var(--dourado);
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.whatsapp-flutuante {
+    width: 58px;
+    height: 58px;
+
+    position: fixed;
+    z-index: 900;
+
+    right: 24px;
+    bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+
+    background-color: var(--azul-secundario);
+
+    color: var(--dourado);
+
+    box-shadow: 0 10px 28px rgba(7, 24, 44, 0.35);
+
+    transition: 0.3s;
+}
+
+.whatsapp-flutuante:hover {
+    background-color: var(--dourado);
+
+    color: var(--azul-principal);
+
+    transform: translateY(-4px);
+}
+
+.whatsapp-flutuante svg {
+    width: 27px;
+    height: 27px;
+
+    fill: currentColor;
+}
+
+[data-whatsapp-link][aria-disabled="true"] {
+    cursor: default;
+}
+
+
+/* ========================================
+   ESTADOS DE FOCO
+======================================== */
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--dourado-claro);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE DAS NOVAS SEÇÕES
+======================================== */
+
+@media (max-width: 1000px) {
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .menu-mobile {
+        position: relative;
+        z-index: 2;
+
+        width: 32px;
+
+        padding: 4px 3px;
+    }
+
+    .nav {
+        width: 100%;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 12px 5% 24px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        background-color: rgba(7, 24, 44, 0.99);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    }
+
+    .nav.nav-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    .nav a {
+        padding: 14px 0;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-contact-mobile {
+        display: block;
+
+        margin-top: 12px;
+        padding: 14px 18px !important;
+
+        border: none !important;
+        border-radius: 5px;
+
+        background-color: var(--dourado);
+
+        color: var(--azul-principal) !important;
+
+        text-align: center;
+        font-weight: 700 !important;
+    }
+
+    .regioes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre-container {
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 55px;
+    }
+
+    .sobre-image-area {
+        height: 520px;
+    }
+
+    .sobre-content h2 {
+        font-size: 39px;
+    }
+
+    .contato-container {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 32px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1.2fr 0.7fr 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .sobre-container {
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+    }
+
+    .sobre-image-area {
+        width: min(100%, 430px);
+        height: 540px;
+
+        margin: 0 auto;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .regioes-section,
+    .sobre-section {
+        padding: 75px 0;
+    }
+
+    .regioes-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .regiao-card {
+        min-height: 220px;
+    }
+
+    .regiao-card span {
+        padding: 24px;
+
+        font-size: 23px;
+    }
+
+    .sobre-image-area {
+        width: calc(100% - 18px);
+        height: 470px;
+    }
+
+    .sobre-decoration {
+        right: -18px;
+        bottom: -18px;
+    }
+
+    .sobre-content h2 {
+        font-size: 36px;
+    }
+
+    .contato-section {
+        padding: 70px 0;
+    }
+
+    .contato-content h2 {
+        font-size: 36px;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+    }
+
+    .footer {
+        padding-top: 55px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 36px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .whatsapp-flutuante {
+        width: 52px;
+        height: 52px;
+
+        right: 16px;
+        bottom: 16px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        width: 290px;
+        height: 410px;
+    }
+
+    .hero-decoration {
+        width: 255px;
+        height: 365px;
+    }
+
+    .sobre-image-area {
+        height: 420px;
+    }
+
+    .sobre-content h2,
+    .contato-content h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
 }
