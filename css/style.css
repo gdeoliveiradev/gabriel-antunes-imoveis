@@ -1,0 +1,581 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+:root {
+    --azul-principal: #07182c;
+    --azul-secundario: #102b4e;
+    --azul-claro: #1f4d7a;
+
+    --dourado: #c5a46d;
+    --dourado-claro: #dfc28e;
+
+    --branco: #ffffff;
+    --cinza-claro: #f5f6f8;
+    --cinza-texto: #606773;
+    --preto: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.header {
+    width: 100%;
+    background-color: rgba(7, 24, 44, 0.98);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+}
+
+.logo-nome {
+    color: var(--branco);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logo-sobrenome {
+    color: var(--dourado);
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* NAVEGAÇÃO */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--dourado);
+}
+
+
+/* BOTÃO DO CABEÇALHO */
+
+.btn-header {
+    background-color: var(--dourado);
+    color: var(--azul-principal);
+
+    padding: 13px 22px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    background-color: var(--dourado-claro);
+    transform: translateY(-2px);
+}
+
+
+/* MENU MOBILE */
+
+.menu-mobile {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: var(--branco);
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 100vh;
+
+    padding-top: 84px;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(31, 77, 122, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #061425 0%,
+            #0a1e36 55%,
+            #102b4e 100%
+        );
+
+    overflow: hidden;
+}
+
+
+.hero-container {
+    min-height: calc(100vh - 84px);
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* ========================================
+   TEXTO PRINCIPAL
+======================================== */
+
+.hero-content {
+    padding: 70px 0;
+}
+
+.hero-tag {
+    display: inline-block;
+
+    color: var(--dourado);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 24px;
+}
+
+
+.hero h1 {
+    color: var(--branco);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 6vw, 76px);
+
+    line-height: 1.05;
+
+    max-width: 700px;
+
+    margin-bottom: 26px;
+}
+
+.hero h1 span {
+    color: var(--dourado);
+}
+
+
+.hero-description {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    max-width: 610px;
+
+    margin-bottom: 36px;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 55px;
+}
+
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 52px;
+
+    padding: 0 28px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.btn-primary {
+    background-color: var(--dourado);
+    color: var(--azul-principal);
+}
+
+.btn-primary:hover {
+    background-color: var(--dourado-claro);
+    transform: translateY(-3px);
+}
+
+
+.btn-secondary {
+    color: var(--branco);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-secondary:hover {
+    border-color: var(--dourado);
+    color: var(--dourado);
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   INFORMAÇÕES ABAIXO DOS BOTÕES
+======================================== */
+
+.hero-info {
+    display: flex;
+    gap: 36px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.hero-info strong {
+    color: var(--branco);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.hero-info span {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   ÁREA DA FOTO
+======================================== */
+
+.hero-image-area {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+
+    min-height: 650px;
+}
+
+
+/* BORDA DECORATIVA */
+
+.hero-decoration {
+    position: absolute;
+
+    width: 390px;
+    height: 520px;
+
+    border: 1px solid rgba(197, 164, 109, 0.55);
+
+    top: 60px;
+    right: 10px;
+
+    border-radius: 200px 200px 20px 20px;
+}
+
+
+/* FOTO */
+
+.hero-image {
+    position: relative;
+
+    width: 450px;
+    height: 590px;
+
+    overflow: hidden;
+
+    border-radius: 220px 220px 15px 15px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+/* CARD SOBRE A FOTO */
+
+.hero-card {
+    position: absolute;
+
+    left: -20px;
+    bottom: 55px;
+
+    z-index: 3;
+
+    width: 245px;
+
+    background-color: rgba(255, 255, 255, 0.96);
+
+    padding: 20px 22px;
+
+    border-left: 4px solid var(--dourado);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.hero-card span {
+    color: var(--dourado);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.hero-card strong {
+    color: var(--azul-principal);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+}
+
+
+.hero-card small {
+    color: var(--cinza-texto);
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .nav,
+    .btn-header {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        padding-top: 40px;
+    }
+
+    .hero-content {
+        text-align: center;
+
+        padding-bottom: 20px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-info {
+        justify-content: center;
+    }
+
+    .hero-image-area {
+        min-height: 570px;
+    }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 650px) {
+
+    .header-container {
+        min-height: 72px;
+    }
+
+    .hero {
+        padding-top: 72px;
+    }
+
+    .hero-container {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .hero-info {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .hero-image-area {
+        min-height: 500px;
+    }
+
+    .hero-image {
+        width: 330px;
+        height: 450px;
+    }
+
+    .hero-decoration {
+        width: 290px;
+        height: 400px;
+    }
+
+    .hero-card {
+        left: 0;
+        bottom: 30px;
+
+        width: 215px;
+    }
+
+}
