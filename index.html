@@ -162,11 +162,142 @@
             </div>
 
         </section>
+<!-- =========================
+     BUSCA DE IMÓVEIS
+========================== -->
 
+<section class="busca-section" id="buscar">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                ENCONTRE SEU IMÓVEL
+            </span>
+
+            <h2>
+                O imóvel certo para o seu momento.
+            </h2>
+
+            <p>
+                Selecione suas preferências e conheça algumas
+                oportunidades disponíveis em Brasília e região.
+            </p>
+
+        </div>
+
+
+        <div class="busca-box">
+
+            <div class="campo-busca">
+
+                <label for="filtro-regiao">
+                    Região
+                </label>
+
+                <select id="filtro-regiao">
+                    <option value="todos">Todas as regiões</option>
+                    <option value="Noroeste">Noroeste</option>
+                    <option value="Park Sul">Park Sul</option>
+                    <option value="Águas Claras">Águas Claras</option>
+                    <option value="Sobradinho">Sobradinho</option>
+                    <option value="Guará">Guará</option>
+                    <option value="Ceilândia">Ceilândia</option>
+                </select>
+
+            </div>
+
+
+            <div class="campo-busca">
+
+                <label for="filtro-quartos">
+                    Quartos
+                </label>
+
+                <select id="filtro-quartos">
+                    <option value="todos">Todos</option>
+                    <option value="1">1 quarto</option>
+                    <option value="2">2 quartos</option>
+                    <option value="3">3 quartos</option>
+                    <option value="4">4 quartos ou mais</option>
+                </select>
+
+            </div>
+
+
+            <div class="campo-busca">
+
+                <label for="filtro-status">
+                    Situação
+                </label>
+
+                <select id="filtro-status">
+                    <option value="todos">Todas</option>
+                    <option value="Pronto para morar">Pronto para morar</option>
+                    <option value="Lançamento">Lançamento</option>
+                </select>
+
+            </div>
+
+
+            <button id="btn-buscar" class="btn-buscar">
+                Buscar imóveis
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     IMÓVEIS EM DESTAQUE
+========================== -->
+
+<section class="imoveis-section" id="imoveis">
+
+    <div class="container">
+
+        <div class="section-header section-header-left">
+
+            <span class="section-tag">
+                OPORTUNIDADES
+            </span>
+
+            <h2>
+                Imóveis em destaque
+            </h2>
+
+            <p>
+                Conheça alguns empreendimentos selecionados em
+                diferentes regiões do Distrito Federal.
+            </p>
+
+        </div>
+
+
+        <div class="imoveis-grid" id="lista-imoveis">
+
+            <!-- Os imóveis serão criados pelo JavaScript -->
+
+        </div>
+
+
+        <div class="nenhum-imovel" id="nenhum-imovel">
+            Nenhum imóvel encontrado com esses filtros.
+        </div>
+
+    </div>
+
+</section>
     </main>
 
 
     <!-- JavaScript -->
+    <script src="js/imoveis.js"></script>
     <script src="js/app.js"></script>
 
 </body>
